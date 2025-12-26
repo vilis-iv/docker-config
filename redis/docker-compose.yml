@@ -1,15 +1,15 @@
 services:
   redis:
+    container_name: redis
     image: redis:8.2.1
-    restart: always
     ports:
       - "6379:6379"
     volumes:
       - redis-data:/data
 
   redis-insight:
+    container_name: redis-insight
     image: redis/redisinsight:latest
-    restart: always
     ports:
       - "5540:5540"
     volumes:
